@@ -249,5 +249,9 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .cta-btn:hover .arrow{transform:translateX(5px)}
 .cta-note{font-family:var(--fh);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--td);margin-top:16px}
 
-footer{text-align:center;padding:40px 24px 28px;font-family:var(--fh);font-size:.74rem;letter-spacing:.08em;color:var(--td)}
+footer{text-align:center;padding:48px 24px 36px;font-family:var(--fh);font-size:.74rem;letter-spacing:.08em;color:var(--td)}
+.footer-social{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.social-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);text-decoration:none;padding:10px 20px;border:1px solid var(--bo);border-radius:10px;transition:var(--ea)}
+.social-link:hover{color:var(--vl);border-color:var(--vl);background:rgba(109,40,217,.08);transform:translateY(-2px)}
+.footer-copy{font-size:.68rem;color:var(--td);letter-spacing:.1em}
 @media(max-width:580px){.bname{font-size:2.8rem}.qd{display:none}.ai{flex-wrap:wrap}.ago{display:none}.sr{gap:8px}.sv{font-size:1.3rem}}
