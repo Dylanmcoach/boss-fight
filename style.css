@@ -212,12 +212,12 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .li{font-size:1.9rem;opacity:.3}
 .aif{flex:1;min-width:0}
 .am{display:flex;align-items:center;gap:9px;margin-bottom:5px;flex-wrap:wrap}
-.api{font-family:var(--fh);font-size:.67rem;letter-spacing:.09em;text-transform:uppercase;color:var(--tm)}
+.api{font-family:var(--fh);font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--tm)}
 .bd{font-family:var(--fh);font-size:.65rem;letter-spacing:.07em;padding:3px 10px;border-radius:100px}
 .bd.vn{background:rgba(201,162,39,.1);color:var(--go);border:1px solid var(--bg2)}
 .bd.lk{background:rgba(107,114,128,.1);color:var(--td);border:1px solid rgba(107,114,128,.2)}
 .bd.cr{background:rgba(220,38,38,.1);color:#FF6666;border:1px solid rgba(220,38,38,.3)}
-.ano{font-family:var(--ft);font-size:1.15rem;color:var(--tx);margin-bottom:2px}
+.ano{font-family:var(--ft);font-size:1.3rem;color:var(--tx);margin-bottom:4px}
 .arc.lkc .ano{color:var(--td)}
 .atg{font-size:.79rem;color:var(--tm);font-style:italic}
 .apr{font-family:var(--fh);font-size:.65rem;letter-spacing:.06em;color:var(--td);margin-top:5px}
