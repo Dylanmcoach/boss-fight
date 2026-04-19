@@ -1,25 +1,50 @@
 // ============================================================
-//  boss-actuel.js — CONFIG DU BOSS DU MOIS
-//  C'est le SEUL fichier à modifier chaque mois.
-//  Remplace aussi boss.gif par le nouveau GIF du boss.
+//  boss-actuel.js — MARS 2026
+//  Renomme le GIF en "boss.gif" avant d'uploader
 // ============================================================
 
 var BOSS = {
-  id:        "sloth-mars-2026",
-  pilier:    "fitness",
-  nom:       "Sloth",
-  tagline:   "La flemme incarn\u00e9e",
-  sousTitre: "L\u2019Ombre du Canap\u00e9",
-  dateDebut: "2026-03-19T00:00:00",
-  dateFin:   "2026-03-25T23:59:59",
-  periode:   "Semaine du 19 au 25 Mars 2026",
+  id:        "doute-mars-2026",
+  pilier:    "mindset",
+  nom:       "Doute",
+  tagline:   "Celui qui r\u00e8gne sur tes peurs",
+  sousTitre: "Le Tyran du Tr\u00f4ne Int\u00e9rieur",
+  dateDebut: "2026-03-16T00:00:00",
+  dateFin:   "2026-05-03T23:59:59",
+  periode:   "Jusqu'au 3 Mai 2026",
   gif:       "boss.gif",
-  lore:      "Sloth sommeille dans les recoins sombres de ton canap\u00e9. Il murmure que demain c\u2019est mieux, que t\u2019as le temps, qu\u2019une s\u00e9ance de moins \u00e7a change rien. Il se nourrit de tes excuses et grossit chaque jour que tu laisses passer. Cette semaine, le r\u00e9veil sonne. C\u2019est toi ou lui.",
-  quetes: [
-    { id:"q1", label:"Faire 50 pompes",                       desc:"R\u00e9parties comme tu veux \u2014 10/jour c\u2019est parfait.",              xp:200 },
-    { id:"q2", label:"Marcher 30 min sans t\u00e9l\u00e9phone", desc:"Laisse le portable \u00e0 la maison. Juste toi, ta t\u00eate, l\u2019air libre.", xp:150 },
-    { id:"q3", label:"R\u00e9aliser 3 s\u00e9ances de sport",  desc:"Salle, home workout, running \u2014 peu importe. L\u2019important c\u2019est de bouger.", xp:300 },
-    { id:"q4", label:"Se coucher avant minuit 5j/7",          desc:"Le sommeil est une arme. Sloth veut que tu restes \u00e9veill\u00e9 \u00e0 scroller.", xp:200 },
-    { id:"q5", label:"Boire 2L d\u2019eau/jour pendant 7 jours", desc:"Ton corps est \u00e0 60% d\u2019eau. Hydrate le h\u00e9ros.",                 xp:250 }
+  lore:      "Il n\u2019a pas besoin de crier. Il murmure. Depuis son tr\u00f4ne il t\u2019observe et attend que tu baisses la garde pour glisser ses poisons dans ta t\u00eate \u2014 \u201cT\u2019es pas capable\u201d, \u201cC\u2019est trop tard pour toi\u201d, \u201cLes autres y arrivent, pas toi\u201d. Le Doute ne se bat pas \u00e0 l\u2019ext\u00e9rieur. Il r\u00e8gne de l\u2019int\u00e9rieur. Cette semaine tu entres dans son royaume et tu reprends le tr\u00f4ne.",
+
+  // ── NORMAL ─────────────────────────────────────
+  quetesNormal: [
+    { id:"n1", label:"100 squats",             desc:"R\u00e9partis sur la semaine \u2014 20/jour c\u2019est parfait. Poids du corps, z\u00e9ro mat\u00e9riel.", xp:150 },
+    { id:"n2", label:"50 pompes",              desc:"En s\u00e9ries ou \u00e9tal\u00e9es. Le compte doit y \u00eatre avant dimanche.",                       xp:150 },
+    { id:"n3", label:"3km de running",         desc:"D\u2019une traite ou en plusieurs sorties. Dehors ou tapis, \u00e7a compte.",                       xp:200 },
+    { id:"n4", label:"50 000 pas sur la semaine", desc:"Active le compteur de ton t\u00e9l\u00e9phone. \u224870 00 pas/jour.",                           xp:200 },
+    { id:"n5", label:"0 fast food pendant 7 jours", desc:"McDo, KFC, Burger King, Uber Eats junk \u2014 rien. Le Doute veut que tu craques.",           xp:200 },
+    { id:"n6", label:"\u00c9crire 3 victoires pass\u00e9es dont tu es fier",
+               desc:"10 minutes, papier ou t\u00e9l\u00e9phone. 3 moments o\u00f9 tu as prouv\u00e9 que tu pouvais.",                                     xp:300, bonus:true }
+  ],
+
+  // ── EXPERT ─────────────────────────────────────
+  quetesExpert: [
+    { id:"e1", label:"200 squats",             desc:"Double la mise. 40/jour ou par s\u00e9ries \u2014 tes jambes vont parler.",                         xp:200 },
+    { id:"e2", label:"100 pompes",             desc:"Le double. En pause, en s\u00e9ries, \u00e7a ne change rien \u2014 100 avant dimanche.",             xp:200 },
+    { id:"e3", label:"5km de running",         desc:"D\u2019une traite cette fois. Pas de coupure. Pace libre.",                                          xp:300 },
+    { id:"e4", label:"75 000 pas sur la semaine", desc:"\u224810 700 pas/jour. Tu bouges s\u00e9rieusement.",                                            xp:300 },
+    { id:"e5", label:"0 fast food + 0 sucre ajout\u00e9", desc:"Pas de junk ET pas de sucre ajout\u00e9. Soda, bonbons, desserts \u2014 tout \u00e7a dehors.", xp:300 },
+    { id:"e6", label:"10 minutes de m\u00e9ditation par jour pendant 5 jours",
+               desc:"Le Doute d\u00e9teste le silence. 10 minutes, yeux ferm\u00e9s, tu respires. 5 jours sur 7.",                                        xp:400, bonus:true }
+  ],
+
+  // ── HEAVEN ─────────────────────────────────────
+  quetesHeaven: [
+    { id:"h1", label:"300 squats",             desc:"300. Pas de n\u00e9gociation. R\u00e9partis comme tu veux \u2014 le compte doit y \u00eatre.",        xp:300 },
+    { id:"h2", label:"150 pompes",             desc:"150 pompes sur la semaine. \u00c0 ce stade tu ne doutes plus de rien.",                              xp:300 },
+    { id:"h3", label:"10km de running",        desc:"10km d\u2019une traite. Si t\u2019as jamais fait \u00e7a, cette semaine c\u2019est ta premi\u00e8re fois.", xp:400 },
+    { id:"h4", label:"100 000 pas sur la semaine", desc:"\u224814 000 pas/jour. Tu vis debout cette semaine.",                                            xp:400 },
+    { id:"h5", label:"Alimentation 100% propre pendant 7 jours", desc:"Z\u00e9ro junk, z\u00e9ro sucre, z\u00e9ro alcool. Que du vrai. 7 jours complets.", xp:400 },
+    { id:"h6", label:"Journaling + m\u00e9ditation + visualisation chaque matin",
+               desc:"Chaque matin de la semaine : \u00e9cris 3 intentions, 10min de m\u00e9ditation, 5min de visualisation de tes objectifs.",             xp:500, bonus:true }
   ]
 };
