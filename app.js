@@ -100,8 +100,10 @@ function init(){
   tx("btag",BOSS.tagline);
   tx("bsubt",BOSS.sousTitre||"");
   tx("blore",BOSS.lore);
-  var totalXP=(BOSS.quetesNormal||[]).concat(BOSS.quetesExpert||[]).concat(BOSS.quetesHeaven||[]).reduce(function(a,q){return a+q.xp},0);
-  tx("xtot",totalXP+" XP");
+  var allQ=(BOSS.quetesNormal||[]).concat(BOSS.quetesExpert||[]).concat(BOSS.quetesHeaven||[]);
+  var totalXP=allQ.reduce(function(a,q){return a+q.xp},0);
+  var normalXP=(BOSS.quetesNormal||[]).reduce(function(a,q){return a+q.xp},0);
+  tx("xtot",normalXP+" → "+totalXP+" XP");
   document.getElementById("gi").src=BOSS.gif;
   initTimer();
   renderLvlTabs();
@@ -339,7 +341,6 @@ function renderArch(){
     c.style.animationDelay=i*0.09+"s";
     var bdg=cur?'<span class="bd cr">⚔ En cours</span>':vn?'<span class="bd vn">✅ Vaincu</span>':'<span class="bd lk">🔒 Non affronté</span>';
     c.innerHTML='<div class="ai">'+
-      '<div class="ath'+((!vn&&!cur)?" lk":"")+'">'+(vn||cur?'<img src="'+b.gif+'" alt="'+b.nom+'"/>':'<div class="li">🔒</div>')+'</div>'+
       '<div class="aif"><div class="am"><span class="api">'+pi(b.pilier)+" "+cap(b.pilier)+'</span>'+bdg+'</div>'+
       '<div class="ano">'+b.nom+'</div><div class="atg">'+b.tagline+'</div><div class="apr">'+b.periode+'</div></div>'+
       (cur?'<button class="ago" onclick="backBoss()">Combattre →</button>':'')+'</div>';
