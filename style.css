@@ -87,6 +87,46 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;bac
 
 /* QUETES */
 .qs{margin-top:36px}
+
+/* LEVEL TABS */
+.lvl-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.lvl-tab{font-family:var(--fh);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:10px 22px;border-radius:10px;border:1px solid var(--bo);cursor:pointer;
+  background:none;color:var(--tm);transition:var(--ea);position:relative;flex:1;text-align:center}
+.lvl-tab:hover:not(.locked){border-color:var(--vl);color:var(--tx)}
+.lvl-tab.active{color:var(--tx);font-weight:700}
+.lvl-tab.normal.active{border-color:var(--vl);background:rgba(109,40,217,.15);color:var(--vl)}
+.lvl-tab.expert.active{border-color:#F59E0B;background:rgba(245,158,11,.1);color:#F59E0B}
+.lvl-tab.heaven.active{border-color:#EC4899;background:rgba(236,72,153,.1);color:#EC4899}
+.lvl-tab.locked{opacity:.4;cursor:not-allowed}
+.lvl-tab.locked::after{content:"🔒";margin-left:6px;font-size:.8rem}
+.lvl-tab.done::after{content:"✅";margin-left:6px;font-size:.8rem}
+.lvl-tab.expert{border-color:rgba(245,158,11,.3)}
+.lvl-tab.heaven{border-color:rgba(236,72,153,.3)}
+
+/* Override quête colors per level */
+.expert-mode .bq{border-color:rgba(245,158,11,.5)}
+.expert-mode .bq:hover{border-color:rgba(245,158,11,.8)}
+.expert-mode .ckb{border-color:rgba(245,158,11,.6)!important}
+.expert-mode .bq.ok .ckb{background:#F59E0B;border-color:#F59E0B}
+.expert-mode .qxvb{color:#F59E0B!important}
+
+.heaven-mode .q{border-color:rgba(236,72,153,.25)}
+.heaven-mode .q:hover{border-color:rgba(236,72,153,.5)}
+.heaven-mode .q.ok{border-color:rgba(236,72,153,.5);background:rgba(236,72,153,.05)}
+.heaven-mode .q.ok .ck{background:#EC4899;border-color:#EC4899}
+.heaven-mode .bq{border-color:rgba(236,72,153,.6)!important}
+.heaven-mode .bq.ok .ckb{background:#EC4899;border-color:#EC4899}
+.heaven-mode .qxv{color:#EC4899}
+.heaven-mode .qxvb{color:#EC4899!important}
+
+/* Level XP summary */
+.lvl-xp-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.lvl-xp-chip{font-family:var(--fh);font-size:.68rem;letter-spacing:.08em;
+  padding:4px 12px;border-radius:100px;border:1px solid}
+.lvl-xp-chip.normal{color:var(--vl);border-color:rgba(109,40,217,.3);background:rgba(109,40,217,.08)}
+.lvl-xp-chip.expert{color:#F59E0B;border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.08)}
+.lvl-xp-chip.heaven{color:#EC4899;border-color:rgba(236,72,153,.3);background:rgba(236,72,153,.08)}
 .eye{font-family:var(--fh);font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tm);margin-bottom:6px}
 .stit{font-family:var(--ft);font-size:1.25rem;color:var(--go);margin-bottom:18px}
 .qh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
@@ -105,6 +145,15 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .qn{display:block;font-family:var(--fh);font-size:.87rem;color:var(--tx);letter-spacing:.03em;transition:var(--ea)}
 .qd{display:block;font-size:.75rem;color:var(--tm);margin-top:2px;line-height:1.4}
 .qxv{font-family:var(--ft);font-size:.72rem;color:var(--go);white-space:nowrap;flex-shrink:0}
+/* Quête Bonus */
+.bq{border-color:rgba(201,162,39,.4);background:rgba(201,162,39,.04)}
+.bq:hover{border-color:rgba(201,162,39,.7);transform:translateX(5px)}
+.bq.ok{border-color:rgba(201,162,39,.6);background:rgba(201,162,39,.08)}
+.bq::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--go);border-radius:12px 0 0 12px}
+.bq{position:relative}
+.ckb{border-color:rgba(201,162,39,.5)!important}
+.bq.ok .ckb{background:var(--go);border-color:var(--go);color:#0D0D0F}
+.qxvb{color:var(--gold-light,#E6BE3A)!important;font-size:.82rem!important}
 .dmg{position:absolute;font-family:var(--ft);font-size:1rem;font-weight:900;color:#FF4444;pointer-events:none;animation:dmg 1.2s ease-out forwards;text-shadow:0 0 10px rgba(220,38,38,.8);z-index:10}
 @keyframes dmg{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-65px) scale(1.5)}}
 
