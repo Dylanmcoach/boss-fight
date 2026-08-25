@@ -5,7 +5,7 @@
 // ============================================================
 
 // ⬇️ CHANGER CE NUMÉRO CHAQUE MOIS (ex: v2, v3, v4...)
-var CACHE_VERSION = "boss-fight-v1";
+var CACHE_VERSION = "boss-fight-v2";
 
 var STATIC_FILES = [
   "./index.html",
