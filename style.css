@@ -7,7 +7,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;bac
 ::selection{background:var(--vg);color:var(--tx)}
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:100;background:linear-gradient(to bottom,rgba(13,13,15,.97),transparent);backdrop-filter:blur(14px);padding:14px 0}
+.nav{position:sticky;top:0;z-index:100;background:linear-gradient(to bottom,rgba(13,13,15,.97),transparent);backdrop-filter:blur(14px);padding:14px 0;padding-top:calc(14px + env(safe-area-inset-top))}
 .nav-i{display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:var(--ft);font-size:.7rem;letter-spacing:.1em;color:var(--go)}
 .tabs{display:flex;gap:6px}
